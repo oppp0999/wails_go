@@ -1,0 +1,29 @@
+프로젝트 
+Wails 프로젝트의 레이아웃은 다음과 같습니다.
+
+.
+├── build/
+│   ├── appicon.png
+│   ├── darwin/
+│   └── windows/
+├── frontend/
+├── go.mod
+├── go.sum
+├── main.go
+└── wails.json
+
+프로젝트 구조 
+/main.go- 주요 응용 프로그램
+/frontend/- 프론트엔드 프로젝트 파일
+/build/- 프로젝트 빌드 디렉토리
+/build/appicon.png- 애플리케이션 아이콘
+/build/darwin/- Mac 전용 프로젝트 파일
+/build/windows/- Windows 관련 프로젝트 파일
+/wails.json- 프로젝트 구성
+/go.mod- Go 모듈 파일
+/go.sum- Go 모듈 체크섬 파일
+이 frontend디렉토리에는 Wails에 특정한 것이 없으며 선택한 모든 프런트엔드 프로젝트가 될 수 있습니다.
+
+디렉토리 는 build빌드 프로세스 중에 사용됩니다. 빌드를 사용자 지정하기 위해 이러한 파일을 업데이트할 수 있습니다. 빌드 디렉터리에서 파일을 제거하면 기본 버전이 다시 생성됩니다.
+
+기본 모듈 이름 go.mod은 "changeme"입니다. 이것을 더 적절한 것으로 변경해야 합니다.
