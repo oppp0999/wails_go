@@ -1,0 +1,25 @@
+{
+ "name": "flappy",
+ "description": "Enter your project description",
+ "author": {
+  "name": "oppp0999",
+  "email": "oppp0999@naver.com"
+ },
+ "version": "0.1.0",
+ "binaryname": "flappy",
+ "frontend": {
+  "dir": "frontend",
+  "install": "npm install",
+  "build": "npm run build",
+  "bridge": "src",
+  "serve": "npm run serve"
+ },
+ "tags": "",
+ "WailsVersion": "",
+ "CrossCompile": false,
+ "Platform": "",
+ "Architecture": "",
+ "LdFlags": "",
+ "GoPath": "",
+ "UseFirebug": false
+}

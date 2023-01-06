@@ -8,3 +8,119 @@ wails init -n myproject -t svelte-ts
 
 외에 다양한
 리엑트, 뷰, 프리액트 라이트 바닐라 등이 있다.
+
+
+
+
+
+
+
+
+
+------
+awesome golang 에서 몇 가지 확인만 해 봄
+
+https://github.com/avelino/awesome-go#gui
+
+ 
+
+fyne
+https://github.com/fyne-io/fyne
+
+크로스플랫폼
+
+material 디자인 기반
+
+활발함
+
+유니코드(cjk) 지원이 아쉽.... 자모 분리되는 현상이 있음
+
+ 
+
+walk
+https://github.com/lxn/walk
+
+윈도우 전용
+
+기존 win32 또는 winform 익숙한 사람이 쓰면 좋을 듯
+
+-피로곰님의 lxn/walk 강좌: https://modu-print.tistory.com/641?category=863372
+
+ 
+
+webview
+https://github.com/webview/webview
+
+크로스플랫폼
+
+OS에 맞는 웹뷰 띄워서 웹으로 디자인 가능
+
+(OS별 엔진: Cocoa/WebKit on macOS, gtk-webkit2 on Linux and Edge on Windows 10)
+
+ 
+
+lorca
+https://github.com/zserge/lorca
+
+크로스플랫폼
+
+chrome 직접 띄워서 CDP(ChromeDevtoolsProtocl)로 chrome과 통신
+
+chrome 대부분 깔려있어서 배포 할 때는 편할 듯
+
+창 제어 등 기본 윈도우 기능은 사용을 못 함
+
+- webview와 동일한 아저씨가 만듬
+
+- webivew 및 lorca 관련 영상: https://www.youtube.com/watch?v=ANcU1g7ZWdU 
+
+ 
+
+go-webview2
+https://github.com/jchv/go-webview2
+
+윈도우 전용
+
+webview와 비슷하나, 종속성 없는 단일 파일 빌드를 추구함 (CGo 안 쓰는 걸 좋아하시는 듯)
+
+일단은 windows webivew2 만을 대상으로 하는 듯
+
+webview2 런타임 설치 필요
+
+- 왜 만들었는가: https://news.ycombinator.com/item?id=24118305
+
+ 
+
+wails
+https://github.com/wailsapp/wails
+
+크로스플랫폼
+
+webview + js/vue/react 까지 묶어서 빌드 제공함 (go-embed)
+
+init, server, build 등 기본 CLI 툴 제공
+
+v1은 windows 쪽 엔진이 구닥다리라, v2에서 webview2 엔진으로 갈아타려고 하는 듯
+
+- 트러블슈팅쪽 가보면 죄다 windows 이야기 ㅠㅠ
+
+- 실제로 go-webview2에서 컨트리뷰션도 하고 있음
+
+ 
+
+뭐가 좋을까?
+간단한 윈도우 툴 만들때는 wails가 가장 좋을 듯
+
+- 웹 베이스라, UI 프레임워크 따로 공부할 필요가 없음
+
+- react/vue 아무리 CLI 사용한다고 해도 환경 구성 너무 구찮......
+
+- OS 브라우저 엔진을 사용해서 배포 파일 크기도 작고, 싱글파일 오예!!
+
+- 물론 v2에서 webview2 엔진 적용이 된 다는 가정하에...
+
+추가
+
+- 2.2 기준으로 70~80Mb 메모리 사용함
+
+- system tray, multiple window, auto update 등 유용한 기능도 로드맵에 있음
